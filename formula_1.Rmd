@@ -1,0 +1,58 @@
+---
+title: "formula_1"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
+library(tidyverse)
+library(knitr)
+theme_set(theme_minimal())
+```
+
+## Summary of the data set
+
+The following represents the dataset of the pit stops of formula 1 cars during races. It has 7 columns which are the raceid, driverid, stop, lap, time, duration and milliseconds.
+
+```{r load data}
+bc_data <- read_csv("data/pit_stops.csv")
+bc_data 
+```
+
+## Plotting the lap number along with the lap time in millisconds
+
+the following graph is a histogram of the lap number along with the time n milliseconds
+```{r, include=TRUE}
+hist_duration_lap <- bc_data |>
+                                ggplot(aes(x = lap, fill =  milliseconds)) +
+                                geom_histogram(bins = 20, color = 'white') 
+# Show the plot at the end
+hist_duration_lap
+```
+As we can see above, the histogram is skewed to the right. This suggest that , as the number of laps increases, the stop time at the pit reduces.
+
+```{r, include=TRUE}
+
+```
+
+
+## Plotting the stop number along with the lap time in millisconds
+
+the following graph is a bar plot of the stop number along with the stop time
+
+```{r fig.width=9, fig.height=9}
+
+
+hist_duration_stop <- bc_data |>
+                                ggplot(aes(x = stop, fill =  milliseconds)) +
+                                geom_histogram(bins = 20, color = 'white') +
+                                xlab("Stop number") + 
+                                ylab("Time in milliseconds")
+# Show the plot at the end
+hist_duration_stop
+                        
+```
+
+In the graph above, we can observe that the early stops takes more time than the stops that happen later during the race.
