@@ -1,6 +1,5 @@
 ---
 output: github_document
-#bibliography: doc/breast_cancer_refs.bib
 ---
 
 # Formula 1 pit stop time Effect on races
