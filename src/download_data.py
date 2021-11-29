@@ -35,12 +35,12 @@ def main(out_type, url, out_file):
     except:
       os.makedirs(os.path.dirname(out_file))
       data.to_csv(out_file, index = False)
-  elif out_type == "feather":
+  elif out_type == "pit_stops":
     try:  
-      feather.write_dataframe(data, out_file)
+      pit_stops.write_dataframe(data, out_file)
     except:
       os.makedirs(os.path.dirname(out_file))
-      feather.write_dataframe(data, out_file)
+      pit_stops.write_dataframe(data, out_file)
 
 if __name__ == "__main__":
   main(opt["--out_type"], opt["--url"], opt["--out_file"])
