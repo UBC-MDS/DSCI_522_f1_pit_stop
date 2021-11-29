@@ -22,8 +22,8 @@ Thus far we have performed some exploratory data analysis, and the report for th
 
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 
-    python src/download_data.py --out_type=feather --url=http://mlr.cs.umass.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data --out_file=data/raw/wdbc.feather
-    Rscript -e "rmarkdown::render('src/breast_cancer_eda.Rmd')"
+    python src/download_data.py --out_type=feather --url=https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020--out_file=data/raw/formula1
+    Rscript -e "rmarkdown::render('src/formula_1.Rmd')"
 
 ## Dependencies
 
