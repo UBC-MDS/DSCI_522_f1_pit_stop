@@ -16,13 +16,13 @@ Each row in the data set represents summary statistics of the pit stop, and this
 
 To answer the inferential question posed above, we plan to carryout the analysis in R. The analysis will start by exploring the data distribution, then, we will choose a suitable estimator given the question mentioned above and the data we have from Kaggle. Another important part of our alaysis would be to specify the hypotheses and the test flavor. Lastly, we will interpret the results.
 
-Thus far we have performed some exploratory data analysis, and the report for that can be found [here](src/breast_cancer_eda.md).
+Thus far we have performed some exploratory data analysis, and the report for that can be found [here](src/pit_stop.md).
 
 ## Usage
 
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 
-    python src/download_data.py --out_type=feather --url=https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020--out_file=data/raw/formula1
+    python src/download_data.py --out_type=pit_stop --url=https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020--out_file=data/raw/formula1
     Rscript -e "rmarkdown::render('src/formula_1.Rmd')"
 
 ## Dependencies
