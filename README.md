@@ -22,7 +22,7 @@ Thus far we have performed some exploratory data analysis, and the report for th
 
 To replicate the analysis, clone this GitHub repository, install the [dependencies](#dependencies) listed below, and run the following commands at the command line/terminal from the root directory of this project:
 
-    python src/download_data.py --out_type=pit_stop --url=https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020--out_file=data/raw/formula1
+    python src/download_data.py --out_type=pit_stops --url=https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020--out_file=data/raw/formula1
     Rscript -e "rmarkdown::render('src/formula_1.Rmd')"
 
 ## Dependencies
